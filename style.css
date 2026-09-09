@@ -215,61 +215,63 @@
 
 
 /* =========================================================
-   v21 MOBILE POLISH
-   Public-site mobile refinement. Desktop styles untouched.
+   v25 — CLEAN MOBILE RULESET
+   Consolidated after checking the actual hero CSS.
    ========================================================= */
+.hero-line { display: inline; }
+
 @media (max-width: 720px) {
   html, body { overflow-x: hidden; }
 
-  /* Hero: keep the Japanese headline visually intentional */
   .hero {
-    min-height: auto !important;
-  }
-  .hero h1 {
-    font-size: clamp(3.25rem, 15vw, 5.15rem) !important;
-    line-height: 1.14 !important;
-    letter-spacing: -0.055em !important;
-    max-width: 100% !important;
-    text-wrap: balance;
-  }
-  .hero p {
-    line-height: 1.9 !important;
+    min-height: auto;
+    padding: 80px 6vw;
   }
 
-  /* Give CTA and English signature their own breathing room */
-  .hero .hero-actions,
-  .hero .hero-cta,
-  .hero .cta {
-    margin-top: 1.8rem !important;
-  }
-  .hero .hero-copy,
-  .hero .hero-text {
+  /* The direct hero content is a flex item; explicitly give it the full width. */
+  .hero > div:first-child {
+    width: 100%;
     min-width: 0;
+    flex: 1 1 100%;
   }
 
-  /* Online badge should read as an intentional feature, not stray text */
-  .online,
-  .online-badge,
-  .online-support,
-  .hero-online,
-  .availability {
-    width: fit-content !important;
-    max-width: calc(100% - 32px) !important;
-    margin: 18px auto 0 !important;
-    padding: 9px 13px !important;
-    border: 1px solid rgba(16,43,68,.18) !important;
-    border-radius: 999px !important;
-    background: rgba(255,255,255,.82) !important;
-    color: #102b44 !important;
-    opacity: 1 !important;
-    font-size: .68rem !important;
-    line-height: 1.2 !important;
-    letter-spacing: .08em !important;
-    position: relative !important;
-    inset: auto !important;
+  .hero h1 {
+    margin: 14px 0 28px;
+    width: 100%;
+    max-width: 100%;
+    font-size: clamp(30px, 9.2vw, 42px);
+    line-height: 1.15;
+    letter-spacing: -0.06em;
+    white-space: normal;
   }
 
-  /* Safer card / grid behavior across narrow phones */
+  .hero h1 .hero-line {
+    display: block;
+    width: 100%;
+    white-space: nowrap;
+  }
+
+  .hero h1 .hero-line-2 {
+    font-size: 1em;
+    letter-spacing: -0.075em;
+  }
+
+  .hero > div:first-child > p:not(.label) {
+    font-size: clamp(15px, 4.05vw, 17px);
+    line-height: 1.9;
+  }
+
+  .hero i {
+    right: 7vw;
+    bottom: 8%;
+    font-size: clamp(28px, 8vw, 38px);
+    opacity: .88;
+  }
+
+  .mobile-hide-online {
+    display: none !important;
+  }
+
   .grid,
   .works-grid,
   .service-grid,
@@ -277,123 +279,12 @@
   .cert-grid {
     grid-template-columns: 1fr !important;
   }
+
   img, svg { max-width: 100%; }
 }
 
 @media (max-width: 390px) {
   .hero h1 {
-    font-size: clamp(3rem, 14vw, 4.45rem) !important;
-  }
-}
-
-
-/* =========================================================
-   v22 — MOBILE FIRST VIEW FINAL POLISH
-   ========================================================= */
-.mobile-title-break { display: none; }
-
-@media (max-width: 720px) {
-  /* Make the first view feel intentional and editorial */
-  .mobile-title-break { display: block; }
-
-  .hero h1 {
-    font-size: clamp(3.05rem, 13.2vw, 4.55rem) !important;
-    line-height: 1.08 !important;
-    letter-spacing: -0.055em !important;
-    max-width: 100% !important;
-    text-wrap: initial !important;
-  }
-
-  /* Give the intro copy a slightly calmer rhythm */
-  .hero p {
-    font-size: clamp(.96rem, 4.1vw, 1.08rem) !important;
-    line-height: 1.9 !important;
-    max-width: 36em !important;
-  }
-
-  /* Keep CTA visually dominant; signature becomes supporting decoration */
-  .hero .hero-actions,
-  .hero .hero-cta,
-  .hero .cta {
-    margin-top: 1.75rem !important;
-  }
-
-  .hero em,
-  .hero .signature,
-  .hero .hero-signature,
-  .hero .english-copy {
-    font-size: clamp(1.75rem, 8vw, 2.55rem) !important;
-    line-height: 1.02 !important;
-    opacity: .88 !important;
-  }
-
-  /* The same information remains in CONTACT; remove the stray mobile row */
-  .mobile-hide-online {
-    display: none !important;
-  }
-}
-
-@media (max-width: 390px) {
-  .hero h1 {
-    font-size: clamp(2.85rem, 12.6vw, 4rem) !important;
-  }
-}
-
-
-/* =========================================================
-   v23 FINAL — lock mobile hero headline to two lines
-   ========================================================= */
-@media (max-width: 720px) {
-  .hero h1 {
-    font-size: clamp(2.55rem, 10.6vw, 3.75rem) !important;
-    line-height: 1.12 !important;
-    letter-spacing: -0.065em !important;
-    max-width: none !important;
-    width: 100% !important;
-    white-space: nowrap !important;
-  }
-
-  .hero h1 .mobile-title-break {
-    display: block !important;
-  }
-}
-
-@media (max-width: 390px) {
-  .hero h1 {
-    font-size: clamp(2.35rem, 10.2vw, 3.35rem) !important;
-  }
-}
-
-
-/* =========================================================
-   v24 FINAL FIX — explicit two-line mobile hero title
-   ========================================================= */
-.hero-line { display: inline; }
-
-@media (max-width: 720px) {
-  .hero h1 {
-    font-size: clamp(2.2rem, 9.2vw, 3.25rem) !important;
-    line-height: 1.1 !important;
-    letter-spacing: -0.06em !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    white-space: normal !important;
-  }
-
-  .hero h1 .hero-line {
-    display: block !important;
-    white-space: nowrap !important;
-    width: 100%;
-  }
-
-  .hero h1 .hero-line-2 {
-    font-size: .92em;
-    letter-spacing: -0.075em;
-  }
-}
-
-@media (max-width: 390px) {
-  .hero h1 {
-    font-size: clamp(2.05rem, 8.8vw, 2.95rem) !important;
+    font-size: clamp(29px, 9vw, 36px);
   }
 }

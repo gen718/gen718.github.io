@@ -188,3 +188,11 @@ v24 FINAL FIX
 ・スマホでは「ITで、」と「もっとシンプルに。」を別ブロックとして固定
 ・2行目の折り返しを禁止し、iPhone幅でも3行目が発生しないよう調整
 ・PC版では従来同様に自然な見出し表示
+
+v25 TRUE FINAL
+・実際のindex.html / style.cssを確認し、v21〜v24で積み重なっていたモバイルCSS競合を整理
+・hero直下のflex要素にwidth:100%を明示
+・見出しを2つのspanに分離し、各行の折り返しを禁止
+・iPhone幅に収まるfont-sizeを再計算
+・スマホのキャッシュ影響を避けるため、見出しに関するcritical CSSをindex.html内にも追加
+・PC版と4つのWORKSページは維持
