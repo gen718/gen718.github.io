@@ -363,3 +363,37 @@
     font-size: clamp(2.35rem, 10.2vw, 3.35rem) !important;
   }
 }
+
+
+/* =========================================================
+   v24 FINAL FIX — explicit two-line mobile hero title
+   ========================================================= */
+.hero-line { display: inline; }
+
+@media (max-width: 720px) {
+  .hero h1 {
+    font-size: clamp(2.2rem, 9.2vw, 3.25rem) !important;
+    line-height: 1.1 !important;
+    letter-spacing: -0.06em !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    white-space: normal !important;
+  }
+
+  .hero h1 .hero-line {
+    display: block !important;
+    white-space: nowrap !important;
+    width: 100%;
+  }
+
+  .hero h1 .hero-line-2 {
+    font-size: .92em;
+    letter-spacing: -0.075em;
+  }
+}
+
+@media (max-width: 390px) {
+  .hero h1 {
+    font-size: clamp(2.05rem, 8.8vw, 2.95rem) !important;
+  }
+}
