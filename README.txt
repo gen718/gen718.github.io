@@ -161,3 +161,11 @@ v19
 
 
 v20 公開前最終仕上げ：SEO/OGP基本設定、favicon、404、CONCEPT WORK表示、リンク検査、公開チェックリストを追加。
+
+v21 公開後スマホ最適化
+・トップのスマホ用ヒーロー文字サイズ/行間を調整
+・CTA周辺の余白を調整
+・全国オンライン対応をスマホでバッジ風に整理
+・狭い画面のグリッド/横はみ出しを防止
+・LUMINOA / NEXTERA / ARCNET / GROWBIZ にモバイル安全策を追加
+・iPhone向け viewport-fit=cover を追加

@@ -212,3 +212,76 @@
 }
 .work-link span{transition:transform .25s ease}
 .work-link:hover span{transform:translateX(4px)}
+
+
+/* =========================================================
+   v21 MOBILE POLISH
+   Public-site mobile refinement. Desktop styles untouched.
+   ========================================================= */
+@media (max-width: 720px) {
+  html, body { overflow-x: hidden; }
+
+  /* Hero: keep the Japanese headline visually intentional */
+  .hero {
+    min-height: auto !important;
+  }
+  .hero h1 {
+    font-size: clamp(3.25rem, 15vw, 5.15rem) !important;
+    line-height: 1.14 !important;
+    letter-spacing: -0.055em !important;
+    max-width: 100% !important;
+    text-wrap: balance;
+  }
+  .hero p {
+    line-height: 1.9 !important;
+  }
+
+  /* Give CTA and English signature their own breathing room */
+  .hero .hero-actions,
+  .hero .hero-cta,
+  .hero .cta {
+    margin-top: 1.8rem !important;
+  }
+  .hero .hero-copy,
+  .hero .hero-text {
+    min-width: 0;
+  }
+
+  /* Online badge should read as an intentional feature, not stray text */
+  .online,
+  .online-badge,
+  .online-support,
+  .hero-online,
+  .availability {
+    width: fit-content !important;
+    max-width: calc(100% - 32px) !important;
+    margin: 18px auto 0 !important;
+    padding: 9px 13px !important;
+    border: 1px solid rgba(16,43,68,.18) !important;
+    border-radius: 999px !important;
+    background: rgba(255,255,255,.82) !important;
+    color: #102b44 !important;
+    opacity: 1 !important;
+    font-size: .68rem !important;
+    line-height: 1.2 !important;
+    letter-spacing: .08em !important;
+    position: relative !important;
+    inset: auto !important;
+  }
+
+  /* Safer card / grid behavior across narrow phones */
+  .grid,
+  .works-grid,
+  .service-grid,
+  .strength-grid,
+  .cert-grid {
+    grid-template-columns: 1fr !important;
+  }
+  img, svg { max-width: 100%; }
+}
+
+@media (max-width: 390px) {
+  .hero h1 {
+    font-size: clamp(3rem, 14vw, 4.45rem) !important;
+  }
+}
