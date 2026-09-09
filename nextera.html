@@ -1,0 +1,28 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>NEXTERA FLOW — Work OS</title><meta name="description" content="株式会社ネクステラを想定した操作可能な業務管理Webアプリのコンセプトワーク。"><link rel="stylesheet" href="nextera.css"><meta name="robots" content="index,follow">
+<meta property="og:type" content="website"><meta property="og:title" content="NEXTERA FLOW — Work OS">
+<meta property="og:description" content="株式会社ネクステラを想定した操作可能な業務管理Webアプリのコンセプトワーク。">
+<link rel="icon" href="favicon.svg" type="image/svg+xml"></head>
+<body><div class="concept-note">PORTFOLIO CONCEPT WORK — 架空企業を想定した制作事例です</div>
+<div class="shell">
+<aside><a class="nlogo" href="#">N<span>×</span></a><nav><button class="active">⌂</button><button>✓</button><button>▦</button><button>◎</button></nav><a class="back" href="index.html#works">←</a></aside>
+<main>
+<header><div><p>GOOD MORNING, GENKI 👋</p><h1>Make work <i>flow.</i></h1></div><div class="head-actions"><button id="resetBtn">Reset</button><button id="openModalBtn" class="new">＋ Add task</button></div></header>
+<section class="summary">
+<article class="hero-card"><p>WEEKLY PROGRESS</p><div><strong id="completionRate">0%</strong><span>Keep moving.<br>You're doing great.</span></div><div class="bar"><i id="progressBar"></i></div></article>
+<article><span>ALL TASKS</span><strong id="totalCount">0</strong><small>this workspace</small></article>
+<article><span>IN MOTION</span><strong id="progressCount">0</strong><small>active now</small></article>
+<article><span>DONE ✦</span><strong id="doneCount">0</strong><small>completed</small></article>
+</section>
+<section class="workspace">
+<div class="board">
+<div class="board-head"><div><p>MY WORK</p><h2>Today’s focus</h2></div><div class="filters"><button class="filter active" data-filter="all">All</button><button class="filter" data-filter="todo">To do</button><button class="filter" data-filter="progress">Doing</button><button class="filter" data-filter="done">Done</button></div></div>
+<div id="taskList"></div>
+</div>
+<div class="right">
+<section class="focus"><p>FOCUS SCORE</p><div class="score"><b id="score">00</b><span>/100</span></div><p class="hint">完了タスクが増えると<br>スコアもアップします。</p></section>
+<section class="activity"><p>ACTIVITY</p><h3>What’s happening</h3><ul id="activityList"></ul></section>
+</div>
+</section>
+</main></div>
+<div class="modal" id="taskModal"><form id="taskForm"><div class="modal-top"><div><p>NEW ITEM</p><h2>Add a task ✦</h2></div><button type="button" id="closeModalBtn">×</button></div><label>What needs to be done?<input id="taskTitle" required maxlength="60" placeholder="Task title"></label><div class="form-row"><label>Owner<input id="taskOwner" required placeholder="Name"></label><label>Due<input id="taskDue" type="date" required></label></div><label>Status<select id="taskStatus"><option value="todo">To do</option><option value="progress">Doing</option><option value="done">Done</option></select></label><button class="submit">Create task →</button></form></div>
+<script src="nextera.js"></script></body></html>

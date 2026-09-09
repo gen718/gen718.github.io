@@ -1,0 +1,18 @@
+MIURA GENKI PORTFOLIO — 公開前チェックリスト（v20）
+
+対応済み
+✓ タイトル / description / OGP基本設定
+✓ favicon.svg
+✓ OGP元データ ogp.svg
+✓ 404.html
+✓ 4作品に「架空企業 / CONCEPT WORK」の常時表示
+✓ 主要ページ・CSS・JavaScriptのローカルリンク確認
+
+公開時
+□ 公開URLを決定
+□ canonical / og:url を公開URLで設定
+□ ogp.svgを1200×630 PNG/JPGへ変換するとSNS互換性がより高い
+□ HTTPSで公開
+□ スマホ実機確認
+□ LINE等でOGP確認
+□ 公開URLから名刺用QRコード作成

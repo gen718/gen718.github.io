@@ -1,0 +1,1 @@
+document.getElementById('menu')?.addEventListener('click',()=>alert('LUMINOA — ABOUT / SERVICES / IDEAS / CONTACT'));
