@@ -106,7 +106,7 @@ v14 追加
 
 
 v15 修正
-・お問い合わせメールアドレスを gennnana8924@icloud.com に変更。
+・お問い合わせメールアドレスを gennana8924@icloud.com に変更。
 
 
 v16 追加
